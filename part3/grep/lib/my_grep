@@ -1,7 +1,10 @@
 #!/usr/bin/env ruby
 
 def my_grep
-    puts "my_grep ran"
+    File.foreach(ARGV[0]) do |line|
+        puts line
+        break
+    end
 end
 
 my_grep()

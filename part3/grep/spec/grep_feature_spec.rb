@@ -3,7 +3,7 @@ describe "#my_grep" do
 
     it 'can read a file and print first line' do
         expect{ system CLI_COMMAND + " file_for_test.txt"}
-            .to output("this is a test file")
+            .to output("this is a test file\n")
             .to_stdout_from_any_process
     end
 
