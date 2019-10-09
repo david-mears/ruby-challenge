@@ -9,7 +9,11 @@ describe "#my_grep" do
             .to_stdout_from_any_process
     end
 
-    xit 'searches files for a regular expression' do
-        raise "TODO"
+    it 'searches files for a regular expression' do
+        expect{ system CLI_COMMAND + " /\bg.*s\b/ file_for_test.txt" }
+            .to output(
+                "i like giraffes\ndid i mention that i like giraffes? good\ngears\ngambles\ngiros\n"
+                )
+            .to_stdout_from_any_process
     end
 end
