@@ -1,9 +1,12 @@
 #!/usr/bin/env ruby
 
 def my_grep
-    File.foreach(ARGV[0]) do |line|
-        puts line
-        break
+    string_to_search_for = ARGV[0]
+    file_path = ARGV[1]
+
+
+    File.foreach(file_path) do |line|
+        puts line if line.match(/#{string_to_search_for}/)
     end
 end
 
