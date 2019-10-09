@@ -1,4 +1,10 @@
-# Grep
+# My solution so far
+
+I'm testing a command-line instruction called `my_grep` so I can keep it separate from the `grep` that already exists.
+
+I used [this guide](https://thoughtbot.com/upcase/videos/lets-build-a-cli) to get the terminal to recognise the command. Except I haven't bothered to add it to path yet, so I'm just having the tests specify the location of the executable file.
+
+# (Instructions)
 
 Search a file for lines matching a regular expression pattern. Return the line
 number and contents of each matching line.

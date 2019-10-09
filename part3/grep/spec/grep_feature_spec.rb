@@ -1,8 +1,6 @@
-require 'my_grep'
-
 describe "#my_grep" do
     it 'can be run from the command line' do
-        expect{ system "my_grep" }.to output("my_grep ran").to_stdout_from_any_process
+        expect{ system "./lib/my_grep" }.to output("my_grep ran\n").to_stdout_from_any_process
     end
 
     it 'searches files for a string' do
