@@ -1,12 +1,15 @@
 #!/usr/bin/env ruby
 
 def my_grep
-    string_to_search_for = ARGV[0]
+    search_string = ARGV[0].split("")
     file_path = ARGV[1]
 
+    search_string[0] = "" if search_string[0] == "/"
+    search_string[-1] = "" if search_string[-1] == "/"
+    search_term = Regexp.new(search_string.join(""))
 
     File.foreach(file_path) do |line|
-        puts line if line.match(/#{string_to_search_for}/)
+        puts line if line.match(search_term)
     end
 end
 

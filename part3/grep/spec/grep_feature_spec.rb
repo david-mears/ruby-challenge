@@ -10,7 +10,10 @@ describe "#my_grep" do
     end
 
     it 'searches files for a regular expression' do
-        expect{ system CLI_COMMAND + " /\bg.*s\b/ file_for_test.txt" }
+        regex_in_quotes = "'/\\bg.*s\\b/'"
+        # equivalent to typing '/\bg.*s\b/' in the command line
+        command = [CLI_COMMAND, regex_in_quotes, "file_for_test.txt"].join(" ")
+        expect{ system command }
             .to output(
                 "i like giraffes\ndid i mention that i like giraffes? good\ngears\ngambles\ngiros\n"
                 )
