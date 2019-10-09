@@ -1,0 +1,10 @@
+this is a test file
+i will use it to test my grep function
+it will be great
+i hope
+giraffe
+i like giraffes
+did i mention that i like giraffes? good
+flipchart
+dogleg
+sparkles
